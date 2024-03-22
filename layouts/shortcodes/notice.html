@@ -23,6 +23,7 @@
         --tip-content: #efe
     }
 
+    {{- if not $.Site.Params.notice.nodark -}}
     @media (prefers-color-scheme:dark) {
         .notice {
             --root-color: #ddd;
@@ -54,6 +55,7 @@
         --tip-title: #363;
         --tip-content: #121
     }
+    {{- end -}}
 
     .notice {
         padding: 18px;
