@@ -32,6 +32,7 @@
     }
 
     /* Dark theme */
+    {{- if not $.Site.Params.notice.nodark -}}
     @media (prefers-color-scheme:dark) {
         .notice {
             --title-color: #fff;
@@ -77,6 +78,7 @@
         --title-background-color: #800;
         --content-background-color: #400;
     }
+    {{- end -}}
 
     /* Content */
     .notice {
